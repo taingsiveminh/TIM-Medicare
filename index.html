@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NANOKINE Medical Supply – Hospital Products Shop</title>
+  <meta name="description" content="Hospital product storefront in Khmer & English. Includes promo banner, 10‑image carousel, product grid, search/filter, language switcher, and contact/Q&A modal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f1220; --panel:#151a2d; --muted:#9aa3b2; --text:#e8ecf3; --brand:#2dd4bf; --brand-2:#60a5fa; --accent:#f59e0b; --danger:#ef4444; --shadow:0 10px 30px rgba(0,0,0,.35); --radius:16px; }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:'Noto Sans Khmer','Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(1200px 600px at 10% -10%,#1a2040,var(--bg));color:var(--text);letter-spacing:.2px}
+    a{color:var(--brand-2);text-decoration:none}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(10px);background:rgba(15,18,32,.65);border-bottom:1px solid rgba(255,255,255,.06)}
+    .wrap{max-width:1180px;margin:0 auto;padding:16px 20px}
+    .row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .brand{font-weight:800;font-size:20px;letter-spacing:.4px}
+    .brand b{color:var(--brand)}
+    .actions{margin-left:auto;display:flex;gap:8px;align-items:center}
+    .search{position:relative;flex:1 1 320px;min-width:220px}
+    .search input{width:100%;padding:12px 44px 12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.06);color:var(--text)}
+    .search svg{position:absolute;right:12px;top:50%;transform:translateY(-50%);opacity:.8}
+    select,button,.btn{border-radius:12px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));color:var(--text);padding:10px 14px;cursor:pointer}
+    .hero{padding:28px 20px 10px}
+    .promo{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;background:linear-gradient(135deg,rgba(45,212,191,.18),rgba(96,165,250,.12));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .promo .txt{padding:22px}
+    .kicker{color:var(--accent);font-weight:700;letter-spacing:.6px}
+    .title{font-size:clamp(20px,3.4vw,36px);font-weight:800;margin:6px 0}
+    .subtitle{color:var(--muted);margin-bottom:14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .cta .btn-primary{background:linear-gradient(180deg,#34d399,#10b981);border:none;color:#0b0f1d;font-weight:700}
+    .cta .btn-ghost{background:transparent}
+    .promo .art{position:relative;min-height:200px}
+    .promo .art img{width:100%;height:100%;object-fit:cover;display:block}
+    .carousel{margin-top:14px;display:grid;gap:10px}
+    .scroller{display:grid;grid-auto-flow:column;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+    .slide{scroll-snap-align:start;min-width:260px;height:160px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .slide img{width:100%;height:100%;object-fit:cover;display:block}
+    .grid{padding:12px 20px 36px}
+    .grid h2{margin:10px 0 14px;font-size:22px;font-weight:800}
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{grid-column:span 12;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:160px 1fr;min-height:160px;box-shadow:var(--shadow)}
+    .card img{width:100%;height:100%;object-fit:cover}
+    .card .body{padding:12px 14px;display:grid;gap:6px;align-content:start}
+    .tag{display:inline-flex;padding:4px 8px;border-radius:999px;font-size:12px;background:rgba(45,212,191,.18);border:1px solid rgba(45,212,191,.35);color:#a7f3d0}
+    .name{font-weight:700;font-size:16px}
+    .specs{color:var(--muted);font-size:13px}
+    .desc{color:#dbe4f3;font-size:14px}
+    .card .cta-row{margin-top:6px;display:flex;gap:8px;flex-wrap:wrap}
+    .btn-sm{padding:8px 10px;font-size:13px}
+    .notice{margin-top:24px;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(245,158,11,.12),rgba(245,158,11,.06))}
+    .faq{margin-top:24px}
+    details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:600}
+    .modal{position:fixed;inset:0;display:none;place-items:center;background:rgba(2,6,23,.75);z-index:80}
+    .modal.show{display:grid}
+    .modal-card{width:min(560px,92vw);background:#0b0f1d;border:1px solid rgba(255,255,255,.08);border-radius:16px;box-shadow:var(--shadow)}
+    .modal-head{padding:14px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08)}
+    .modal-body{padding:16px;display:grid;gap:10px}
+    .modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:16px 20px 40px;color:var(--muted);text-align:center}
+    @media (max-width:920px){.promo{grid-template-columns:1fr}.card{grid-template-columns:1fr}}
+    @media (min-width:680px){.card{grid-column:span 6}}
+    @media (min-width:1080px){.card{grid-column:span 4}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap row">
+      <div class="brand">NANOKINE <b>Medical</b> Supply</div>
+      <div class="actions">
+        <div class="search">
+          <input id="search" type="search" placeholder="ស្វែងរកផលិតផល / Search products…" />
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M10 2a8 8 0 105.293 14.293l3.707 3.707 1.414-1.414-3.707-3.707A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/></svg>
+        </div>
+        <select id="category"></select>
+        <select id="lang">
+          <option value="km">ខ្មែរ</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="promo">
+        <div class="txt">
+          <div class="kicker" data-i18n="kicker">BIG PROMOTION !!!!!</div>
+          <div class="title"><span data-i18n="promo_title">FICOCYTE 30MU — Filgrastim</span></div>
+          <p class="subtitle" data-i18n="promo_sub">ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស (Growth factor)</p>
+          <div class="cta">
+            <button class="btn btn-primary" data-contact data-product="FICOCYTE 30MU (Filgrastim)" data-i18n="btn_contact">ទំនាក់ទំនង | Contact</button>
+            <a href="#products" class="btn btn-ghost" data-i18n="btn_view_all">មើលផលិតផលទាំងអស់</a>
+          </div>
+          <div class="notice" style="margin-top:14px">
+            <strong data-i18n="health_notice_title">សេចក្តីជូនដំណឹងជាសុខភាព:</strong>
+            <span data-i18n="health_notice_text"> ផលិតផលវេជ្ជសាស្ត្រទាំងអស់គួរប្រើប្រាស់ក្រោមការណែនាំរបស់បុគ្គលិកសុខាភិបាល។</span><br>
+            <span class="muted" data-i18n="health_notice_text_en">All medical products should be used under healthcare professional guidance.</span>
+          </div>
+        </div>
+        <div class="art"><img src="a1.jpg" alt="FICOCYTE 30MU Filgrastim promotion" /></div>
+      </div>
+
+      <div class="carousel" aria-label="Featured images">
+        <div class="scroller" id="carousel">
+          <div class="slide"><img src="a1.jpg" alt="FICOCYTE 30MU"/></div>
+          <div class="slide"><img src="a2.jpg" alt="Wound Healing Dressing"/></div>
+          <div class="slide"><img src="a3.jpg" alt="Wound Healing Paste"/></div>
+          <div class="slide"><img src="a4.jpg" alt="PCN Catheter Set"/></div>
+          <div class="slide"><img src="a5.jpg" alt="Stone Retrieval Basket"/></div>
+          <div class="slide"><img src="a6.jpg" alt="Double J Stent"/></div>
+          <div class="slide"><img src="a7.jpg" alt="PCNL Catheter Pigtail"/></div>
+          <div class="slide"><img src="a8.jpg" alt="Disposable Endoscopic Hemoclip"/></div>
+          <div class="slide"><img src="a9.jpg" alt="Clip Hem‑o‑lok"/></div>
+          <div class="slide"><img src="a10.jpg" alt="NANOKINE"/></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="grid wrap">
+      <h2 data-i18n="products_title">ផលិតផល / Products</h2>
+      <div class="cards" id="product-grid" aria-live="polite"></div>
+
+      <div class="notice">
+        <strong data-i18n="dear_title">សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ</strong>
+        <p class="desc" style="margin:.4rem 0 0" data-i18n="dear_body">
+          ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា ។ សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ ។
+        </p>
+        <div class="cta" style="margin-top:10px">
+          <button class="btn btn-primary" data-contact data-product="General Inquiry" data-i18n="btn_inquiry">ទំនាក់ទំនងទិញ | ចង់សួរសំនួរ</button>
+          <a class="btn" id="fb-link" href="#" target="_blank" rel="noopener" data-i18n="btn_fb">Facebook Page</a>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary data-i18n="faq1_q">FAQ: How to order?</summary>
+          <p class="muted" data-i18n="faq1_a">Click the "Contact" button on any product to call, SMS, or message us on Facebook.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq2_q">Delivery in Cambodia?</summary>
+          <p class="muted" data-i18n="faq2_a">Yes. We deliver in Phnom Penh and many provinces (fee depends on location).</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> <span data-i18n="footer_text">NANOKINE Medical Supply — ទំនាក់ទំនងទិញ | ចង់សួរសំនួរ | Facebook Page</span>
+  </footer>
+
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <div id="contactTitle" class="name" data-i18n="contact_title">ទំនាក់ទំនង / Contact</div>
+          <div class="muted" id="contactProduct"></div>
+        </div>
+        <button class="btn btn-sm" id="closeModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="muted" data-i18n="contact_choose">Choose a contact method:</div>
+        <div class="modal-actions">
+          <a id="callLink" class="btn" href="tel:+85500000000" data-i18n="contact_call">📞 Call</a>
+          <a id="fbMsgLink" class="btn" href="#" target="_blank" rel="noopener" data-i18n="contact_msg">💬 Facebook Messenger</a>
+          <a id="smsLink" class="btn" href="sms:+85500000000" data-i18n="contact_sms">✉️ SMS</a>
+        </div>
+        <div class="muted" data-i18n="contact_note">Edit phone & Facebook links in the script to your real business contacts.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ===== I18N DICTIONARY =====
+    const I18N = {
+      km: {
+        brand: 'NANOKINE Medical Supply',
+        search_placeholder: 'ស្វែងរកផលិតផល',
+        categories: ['ប្រភេទទាំងអស់ • All','Wound Care','Nephrology & Urology','Gastrointestinal (GI)','Medicine'],
+        kicker: 'BIG PROMOTION !!!!!',
+        promo_title: 'FICOCYTE 30MU — Filgrastim',
+        promo_sub: 'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស (Growth factor)',
+        btn_contact: 'ទំនាក់ទំនង | Contact',
+        btn_view_all: 'មើលផលិតផលទាំងអស់',
+        health_notice_title: 'សេចក្តីជូនដំណឹងជាសុខភាព:',
+        health_notice_text: 'ផលិតផលវេជ្ជសាស្ត្រទាំងអស់គួរប្រើប្រាស់ក្រោមការណែនាំរបស់បុគ្គលិកសុខាភិបាល។',
+        health_notice_text_en: 'All medical products should be used under healthcare professional guidance.',
+        products_title: 'ផលិតផល / Products',
+        dear_title: 'សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ',
+        dear_body: 'ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា ។ សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ ។',
+        btn_inquiry: 'ទំនាក់ទំនងទិញ | ចង់សួរសំនួរ',
+        btn_fb: 'Facebook Page',
+        faq1_q: 'សំណួរ: ធ្វើដូចម្តេចដើម្បីបញ្ជាទិញ?',
+        faq1_a: 'ចុចប៊ូតុង "ទំនាក់ទំនង" លើផលិតផលណាមួយ ដើម្បីទូរស័ព្ទ, SMS ឬ Facebook Messenger។',
+        faq2_q: 'មានដឹកជញ្ជូនទូទាំងប្រទេសទេ?',
+        faq2_a: 'មាន។ នៅភ្នំពេញ និងខេត្តជាច្រើន (ថ្លៃសេវាអាស្រ័យលើទីតាំង)។',
+        footer_text: 'NANOKINE Medical Supply — ទំនាក់ទំនងទិញ | ចង់សួរសំនួរ | Facebook Page',
+        contact_title: 'ទំនាក់ទំនង / Contact',
+        contact_choose: 'ជ្រើសរើសវិធីទាក់ទង:',
+        contact_call: '📞 ទូរស័ព្ទ',
+        contact_msg: '💬 Facebook Messenger',
+        contact_sms: '✉️ SMS',
+        contact_note: 'សូមកែលេខទំនាក់ទំនង និង FB ក្នុង script ឱ្យត្រឹមត្រូវ។'
+      },
+      en: {
+        brand: 'NANOKINE Medical Supply',
+        search_placeholder: 'Search products',
+        categories: ['All Categories • All','Wound Care','Nephrology & Urology','Gastrointestinal (GI)','Medicine'],
+        kicker: 'BIG PROMOTION !!!!!',
+        promo_title: 'FICOCYTE 30MU — Filgrastim',
+        promo_sub: 'Medicine to stimulate white blood cell growth (Growth factor)',
+        btn_contact: 'Contact',
+        btn_view_all: 'View All Products',
+        health_notice_title: 'Health Notice:',
+        health_notice_text: 'All medical products should be used under healthcare professional guidance.',
+        health_notice_text_en: '',
+        products_title: 'Products',
+        dear_title: 'Dear Doctors',
+        dear_body: 'NANOKINE products group is created to share information and special programs more easily. Thank you for your cooperation and support.',
+        btn_inquiry: 'Contact / Inquiry',
+        btn_fb: 'Facebook Page',
+        faq1_q: 'FAQ: How to order?',
+        faq1_a: 'Click the "Contact" button on any product to call, SMS, or message us on Facebook.',
+        faq2_q: 'Delivery in Cambodia?',
+        faq2_a: 'Yes. We deliver in Phnom Penh and many provinces (fee depends on location).',
+        footer_text: 'NANOKINE Medical Supply — Contact | Inquiry | Facebook Page',
+        contact_title: 'Contact',
+        contact_choose: 'Choose a contact method:',
+        contact_call: '📞 Call',
+        contact_msg: '💬 Facebook Messenger',
+        contact_sms: '✉️ SMS',
+        contact_note: 'Update the phone number and Facebook links in the script to your real business contacts.'
+      }
+    };
+
+    // ===== PRODUCTS DATA =====
+    const PRODUCTS = [
+      {id:1,category:'Medicine',name_en:'FICOCYTE 30MU (Filgrastim)',name_km:'FICOCYTE 30MU — Filgrastim',desc_en:'Stimulates white blood cell growth',desc_km:'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស',specs:['30 MU / 0.5 ml','Solution for injection (S.C / I.V)','Box of 1 prefilled syringe','WHO‑GMP'],image:'a1.jpg',promo:true},
+      {id:2,category:'Wound Care',name_en:'Wound Healing Dressing (Dermlin)',name_km:'ប៉ង់ព្យាបាលរបួស',desc_en:'Sterile dressing for wound management',desc_km:'សម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។',specs:['10 × 10 cm','Sterile wound dressing','12 patches / box'],image:'a2.jpg'},
+      {id:3,category:'Wound Care',name_en:'Wound Healing Paste (Dermlin)',name_km:'ក្រែមព្យាបាលរបួស',desc_en:'Topical paste for burns, cuts, and surgical wounds',desc_km:'ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានលឿន និងជាសះឆាប់រហ័ស (ពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម)។',specs:['10 g / tube','12 tubes / box'],image:'a3.jpg'},
+      {id:4,category:'Nephrology & Urology',name_en:'PCN Catheter Set (Advin)',name_km:'PCN Catheter Set',desc_en:'Set for percutaneous nephrostomy',desc_km:'សម្ភារៈសម្រាប់ Percutaneous Nephrostomy',specs:['Sizes: 8 FR / 10 FR / 14 FR','Brand: Advin','Sterile set'],image:'a4.jpg'},
+      {id:5,category:'Nephrology & Urology',name_en:'Stone Retrieval Basket – Nitinol (Advin)',name_km:'ថង់យកក្រួស (Nitinol)',desc_en:'For stone retrieval in urinary system',desc_km:'សម្រាប់យកក្រួសក្នុងប្រព័ន្ធនោម',specs:['4 FR','Length 110 cm','Segura • Tipless','Material: Nitinol','Brand: Advin'],image:'a5.jpg'},
+      {id:6,category:'Nephrology & Urology',name_en:'Double J Stent – Single Loop (Advin)',name_km:'Double J Stent',desc_en:'For ureteric stenting',desc_km:'សម្រាប់ Ureteric stenting',specs:['7 FR • 24 cm','Single loop','Both ends open','Color: Blue','Brand: Advin'],image:'a6.jpg'},
+      {id:7,category:'Nephrology & Urology',name_en:'PCNL Catheter, Pigtail (SEPLOU)',name_km:'PCNL Catheter, Pigtail',desc_en:'For percutaneous nephrolithotomy',desc_km:'សម្រាប់ Percutaneous nephrolithotomy',specs:['8 FR • 30 cm','Pigtail','Brand: SEPLOU'],image:'a7.jpg'},
+      {id:8,category:'GI',name_en:'Disposable Endoscopic Hemoclip (Vedkang)',name_km:'Hemoclip សម្រាប់អេនដូស្កូពី',desc_en:'Hemostasis clip for GI endoscopy',desc_km:'សម្រាប់ hemostasis ក្នុង GI endoscopy',specs:['O.D 2.5 mm','Working length 2300 mm','Opening size 11 / 13 / 16 mm','Coated','One‑One Rotation','Brand: Vedkang'],image:'a8.jpg'},
+      {id:9,category:'Nephrology & Urology',name_en:'Clip Hem‑o‑lok (Meta Biomed)',name_km:'Clip Hem‑o‑lok',desc_en:'Non‑absorbable polymer ligating clip',desc_km:'Non‑absorbable polymer ligating clip',specs:['Sizes: L & XL','6 clips / 1 cartridge','Brand: Meta Biomed'],image:'a9.jpg'},
+      {id:10,category:'Medicine',name_en:'NANOKINE (Recombinant Human Erythropoietin alfa)',name_km:'NANOKINE — Recombinant Human Erythropoietin alfa',desc_en:'Solution for injection • 4000 IU / 0.5 ml • Box of 1 prefilled syringe',desc_km:'Solution for injection • 4000 IU / 0.5 ml • Box of 1 prefilled syringe',specs:['4000 IU / 0.5 ml','S.C / I.V injection','Box of 1 prefilled syringe','WHO‑GMP'],image:'a10.jpg'}
+    ];
+
+    // ===== STATE =====
+    let currentLang = localStorage.getItem('lang') || 'km';
+
+    // ===== RENDER HELPERS =====
+    const gridEl = document.getElementById('product-grid');
+    const qInput = document.getElementById('search');
+    const catSelect = document.getElementById('category');
+    const langSelect = document.getElementById('lang');
+
+    function t(key){ return (I18N[currentLang] && I18N[currentLang][key]) || key }
+
+    function applyTexts(){
+      document.documentElement.lang = currentLang;
+      qInput.placeholder = currentLang==='km' ? `${t('search_placeholder')} / Search products…` : t('search_placeholder');
+      // categories
+      catSelect.innerHTML = I18N[currentLang].categories.map((c,i)=>`<option value="${i===0?'all':I18N.en.categories[i]}">${c}</option>`).join('');
+      // i18n spans
+      document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent = t(el.getAttribute('data-i18n')); });
+      // footer year remains same
+    }
+
+    function cardTemplate(p){
+      const name = currentLang==='km' ? p.name_km : p.name_en;
+      const desc = currentLang==='km' ? p.desc_km : p.desc_en;
+      return `
+        <article class="card" data-name="${(p.name_en + ' ' + p.name_km).toLowerCase()}" data-cat="${p.category}">
+          <img src="${p.image}" alt="${p.name_en}" loading="lazy" />
+          <div class="body">
+            ${p.promo ? '<span class="tag">🔥 Promotion</span>' : ''}
+            <div class="name">${name}</div>
+            <div class="specs">${p.category}</div>
+            <div class="desc">${desc}</div>
+            ${p.specs?.length ? `<div class="specs">${p.specs.join(' • ')}</div>` : ''}
+            <div class="cta-row">
+              <button class="btn btn-sm" data-contact data-product="${p.name_en}">${t('btn_contact')}</button>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function render(products){
+      gridEl.innerHTML = products.map(cardTemplate).join('');
+      attachContactHandlers();
+      applyFilters();
+    }
+
+    function applyFilters(){
+      const q = qInput.value.trim().toLowerCase();
+      const catVal = catSelect.value;
+      const cards = [...document.querySelectorAll('.card')];
+      cards.forEach(c=>{
+        const name = c.dataset.name;
+        const matchQ = !q || name.includes(q);
+        const matchCat = catVal === 'all' || c.dataset.cat === catVal;
+        c.style.display = (matchQ && matchCat) ? '' : 'none';
+      });
+    }
+
+    qInput.addEventListener('input', applyFilters);
+    catSelect.addEventListener('change', applyFilters);
+
+    // ===== CONTACT MODAL =====
+    const modal = document.getElementById('contactModal');
+    const contactProduct = document.getElementById('contactProduct');
+    const callLink = document.getElementById('callLink');
+    const smsLink = document.getElementById('smsLink');
+    const fbMsgLink = document.getElementById('fbMsgLink');
+    const fbLink = document.getElementById('fb-link');
+
+    const PHONE = '+85500000000';
+    const FACEBOOK_PAGE_URL = 'https://facebook.com/YourPageName';
+    const FACEBOOK_MESSENGER_URL = 'https://m.me/YourPageName';
+
+    function openModal(productName){
+      contactProduct.textContent = productName || '';
+      callLink.href = `tel:${PHONE}`;
+      smsLink.href = `sms:${PHONE}`;
+      fbMsgLink.href = FACEBOOK_MESSENGER_URL;
+      modal.classList.add('show');
+    }
+    function closeModal(){ modal.classList.remove('show'); }
+    function attachContactHandlers(){
+      document.querySelectorAll('[data-contact]').forEach(btn=>{
+        btn.addEventListener('click', e=>{
+          const prod = e.currentTarget.getAttribute('data-product');
+          openModal(prod);
+        });
+      });
+    }
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    modal.addEventListener('click', e=>{ if(e.target===modal) closeModal(); });
+
+    // ===== INIT =====
+    document.getElementById('year').textContent = new Date().getFullYear();
+    fbLink.href = FACEBOOK_PAGE_URL;
+    langSelect.value = currentLang;
+    langSelect.addEventListener('change', ()=>{
+      currentLang = langSelect.value; localStorage.setItem('lang', currentLang); applyTexts(); render(PRODUCTS);
+    });
+
+    applyTexts();
+    render(PRODUCTS);
+  </script>
+</body>
+</html>
