@@ -21,17 +21,38 @@
 
     <!-- Header and Navigation -->
     <header class="bg-white shadow-md rounded-b-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
-            <div class="text-2xl font-bold tracking-tight text-sky-700">TIM Medicare</div>
-            <nav class="mt-4 sm:mt-0">
-                <ul class="flex flex-wrap justify-center sm:space-x-4 md:space-x-8">
-                    <li><a href="#home" class="px-3 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200">Home</a></li>
-                    <li><a href="#about" class="px-3 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200">About</a></li>
-                    <li><a href="#products" class="px-3 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200">Products</a></li>
-                    <li><a href="#news" class="px-3 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200">News</a></li>
-                    <li><a href="#contact" class="px-3 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200">Contact</a></li>
-                </ul>
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between relative">
+            <!-- Logo and Brand Name -->
+            <a href="#home" class="flex items-center space-x-2 text-2xl font-bold tracking-tight text-sky-700">
+                <span id="brand-name">TIM Medicare</span>
+            </a>
+
+            <!-- Hamburger menu button for mobile -->
+            <div class="sm:hidden">
+                <button id="nav-menu-button" class="text-sky-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links and Language Switcher -->
+            <nav id="nav-menu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-40 sm:static sm:w-auto sm:transform-none sm:shadow-none">
+                <div class="p-8 sm:p-0">
+                    <ul class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 md:space-x-8 sm:space-y-0 mt-8 sm:mt-0 items-center">
+                        <li><a href="#home" class="block w-full text-center px-4 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200" id="nav-home">Home</a></li>
+                        <li><a href="#about" class="block w-full text-center px-4 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200" id="nav-about">About</a></li>
+                        <li><a href="#products" class="block w-full text-center px-4 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200" id="nav-products">Products</a></li>
+                        <li><a href="#news" class="block w-full text-center px-4 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200" id="nav-news">News</a></li>
+                        <li><a href="#contact" class="block w-full text-center px-4 py-2 rounded-lg hover:bg-sky-100 transition-colors duration-200" id="nav-contact">Contact</a></li>
+                        <li class="flex space-x-2 mt-4 sm:mt-0">
+                            <button id="lang-en" class="px-2 py-1 rounded-lg bg-sky-200 font-semibold text-sky-800 hover:bg-sky-300 transition-colors duration-200">EN</button>
+                            <button id="lang-kh" class="px-2 py-1 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition-colors duration-200">KH</button>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+            <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden sm:hidden"></div>
         </div>
     </header>
 
@@ -39,46 +60,46 @@
 
         <!-- Home Section -->
         <section id="home" class="bg-white p-8 rounded-lg shadow-lg">
-            <h1 class="text-4xl font-extrabold mb-4 text-center text-sky-700">Your Health, Our Priority</h1>
-            <div class="text-center text-lg italic text-gray-500 mb-6">TIM Medicare makes a better solution and best saving!</div>
-            <p class="mb-4 leading-relaxed">
+            <h1 class="text-4xl font-extrabold mb-4 text-center text-sky-700" id="home-title">Your Health, Our Priority</h1>
+            <div class="text-center text-lg italic text-gray-500 mb-6" id="home-slogan">TIM Medicare makes a better solution and best saving!</div>
+            <p class="mb-4 leading-relaxed" id="home-text-1">
                 The willingness to differentiate from innovative products is the corporate spirit of TIM Medicare that remains unchanged in the fast-changing medical industry. The goal of TIM Medicare is to create the safest medical products and best qualities that satisfy our customers based on original technology and experts in each field of the medical industry.
             </p>
             <div class="mt-6">
-                <h3 class="text-2xl font-semibold mb-2 text-sky-600">Objectives:</h3>
+                <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="home-objectives-heading">Objectives:</h3>
                 <ul class="list-disc list-inside space-y-2">
-                    <li>Establish strong supplier contracts to ensure consistent inventory.</li>
-                    <li>Attain full regulatory compliance of country and international standard certificates such as ISO/GMP/CE/FDA/MOH.</li>
+                    <li id="objective-1">Establish strong supplier contracts to ensure consistent inventory.</li>
+                    <li id="objective-2">Attain full regulatory compliance of country and international standard certificates such as ISO/GMP/CE/FDA/MOH.</li>
                 </ul>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700">About</h2>
-            <p class="mb-4 leading-relaxed">
+            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="about-heading">About</h2>
+            <p class="mb-4 leading-relaxed" id="about-text-1">
                 TIM Medicare is an independent distributor of medicines, medical devices and consumables, and haemodialysis solution that is focusing on hospitals, retail pharmacies, and health care clinics in the Kingdom of Cambodia. Established in 2020 plus several years experience with this medical industry.
             </p>
-            <p class="mb-6 leading-relaxed">
+            <p class="mb-6 leading-relaxed" id="about-text-2">
                 To provide high quality, affordable pharmaceutical products and devices to healthcare providers and pharmacies, ensuring timely delivery and a reliable supplier.
                 To become a leading distributor of pharmaceutical products and devices known for quality service, integrity, and customer satisfaction.
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Business Area</h3>
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="business-area-heading">Business Area</h3>
                     <ul class="list-disc list-inside space-y-1">
-                        <li>Medicines</li>
-                        <li>Medical Devices</li>
-                        <li>Hemodialysis Solution</li>
+                        <li id="business-1">Medicines</li>
+                        <li id="business-2">Medical Devices</li>
+                        <li id="business-3">Hemodialysis Solution</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Partnership Brands & Manufacturers</h3>
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="partnerships-heading">Partnership Brands & Manufacturers</h3>
                     <ul class="list-disc list-inside space-y-1">
-                        <li>Dsjfkosfjsd</li>
-                        <li>Dfksfjass</li>
-                        <li>Fdskfhjsfs</li>
-                        <li>Sdfshfkljfsj</li>
+                        <li id="partner-1">Dsjfkosfjsd</li>
+                        <li id="partner-2">Dfksfjass</li>
+                        <li id="partner-3">Fdskfhjsfs</li>
+                        <li id="partner-4">Sdfshfkljfsj</li>
                     </ul>
                 </div>
             </div>
@@ -86,84 +107,84 @@
 
         <!-- Products Section -->
         <section id="products" class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700">Products</h2>
+            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="products-heading">Products</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Product 1 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a1.jpg" alt="FICOCYTE 30MU" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">FICOCYTE 30MU</h3>
-                    <p class="text-sm text-gray-600 font-medium mb-2">Filgrastim</p>
-                    <p class="text-sm text-gray-700 mb-4">ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-1-name">FICOCYTE 30MU</h3>
+                    <p class="text-sm text-gray-600 font-medium mb-2" id="product-1-desc-1">Filgrastim</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-1-desc-2">ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស</p>
                 </div>
                 
                 <!-- Product 2 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a2.jpg" alt="Wound Healing Dressing" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Wound Healing Dressing</h3>
-                    <p class="text-sm text-gray-700 mb-4">កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-2-name">Wound Healing Dressing</h3>
+                    <p class="text-sm text-gray-700 mb-4" id="product-2-desc">កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)</p>
                 </div>
 
                 <!-- Product 3 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a3.jpg" alt="Wound Healing Paste" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Wound Healing Paste</h3>
-                    <p class="text-sm text-gray-700 mb-4">ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 ទិប (10g)</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-3-name">Wound Healing Paste</h3>
+                    <p class="text-sm text-gray-700 mb-4" id="product-3-desc">ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 ទិប (10g)</p>
                 </div>
 
                 <!-- Product 4 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a4.jpg" alt="PCN Catheter Set" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">PCN Catheter Set</h3>
-                    <p class="text-sm text-gray-700 mb-2">Nephrology & Urology Accessory</p>
-                    <p class="text-sm text-gray-700 mb-4">8 FR / 10FR / 14 FR<br>Brand Advin</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-4-name">PCN Catheter Set</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-4-desc-1">Nephrology & Urology Accessory</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-4-desc-2">8 FR / 10FR / 14 FR<br>Brand Advin</p>
                 </div>
                 
                 <!-- Product 5 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a5.jpg" alt="Stone Retrieval Basket - Nitinol" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Stone Retrieval Basket - Nitinol</h3>
-                    <p class="text-sm text-gray-700 mb-2">Nephrology and Urology Accessory</p>
-                    <p class="text-sm text-gray-700 mb-4">4FR, 110cm, Segura, Tipless<br>Brand Advin</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-5-name">Stone Retrieval Basket - Nitinol</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-5-desc-1">Nephrology and Urology Accessory</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-5-desc-2">4FR, 110cm, Segura, Tipless<br>Brand Advin</p>
                 </div>
                 
                 <!-- Product 6 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a6.jpg" alt="Double J Stent" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Double J Stent</h3>
-                    <p class="text-sm text-gray-700 mb-2">Nephrology and Urology Accessory</p>
-                    <p class="text-sm text-gray-700 mb-4">Single Loop<br>7 FR, 24 CM<br>Both End Open, BLUE<br>Brand Advin</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-6-name">Double J Stent</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-6-desc-1">Nephrology and Urology Accessory</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-6-desc-2">Single Loop<br>7 FR, 24 CM<br>Both End Open, BLUE<br>Brand Advin</p>
                 </div>
                 
                 <!-- Product 7 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a7.jpg" alt="PCNL Catherter, Pigtail" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">PCNL Catherter, Pigtail</h3>
-                    <p class="text-sm text-gray-700 mb-2">Nephrology and Urology Accessory</p>
-                    <p class="text-sm text-gray-700 mb-4">8FR/30cm<br>Brand SEPLOU</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-7-name">PCNL Catherter, Pigtail</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-7-desc-1">Nephrology and Urology Accessory</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-7-desc-2">8FR/30cm<br>Brand SEPLOU</p>
                 </div>
                 
                 <!-- Product 8 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a8.jpg" alt="Disposable Endoscopic Hemoclip" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Disposable Endoscopic Hemoclip</h3>
-                    <p class="text-sm text-gray-700 mb-2">Gastrointestinal (GI) Accessory</p>
-                    <p class="text-sm text-gray-700 mb-4">2.5mm, 2300mm<br>11mm / 13mm / 16mm<br>Coated, One-One Rotation<br>Brand Vedkang</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-8-name">Disposable Endoscopic Hemoclip</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-8-desc-1">Gastrointestinal (GI) Accessory</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-8-desc-2">2.5mm, 2300mm<br>11mm / 13mm / 16mm<br>Coated, One-One Rotation<br>Brand Vedkang</p>
                 </div>
                 
                 <!-- Product 9 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a9.jpg" alt="Clip Hem-o-lok" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">Clip Hem-o-lok</h3>
-                    <p class="text-sm text-gray-700 mb-2">Brand Meta Biomed</p>
-                    <p class="text-sm text-gray-700 mb-4">Size: L and XL<br>6 clips / 1 Cartridge</p>
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-9-name">Clip Hem-o-lok</h3>
+                    <p class="text-sm text-gray-700 mb-2" id="product-9-desc-1">Brand Meta Biomed</p>
+                    <p class="text-sm text-gray-700 mb-4" id="product-9-desc-2">Size: L and XL<br>6 clips / 1 Cartridge</p>
                 </div>
                 
                 <!-- Product 10 -->
                 <div class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center">
                     <img src="a10.jpg" alt="NANOKINE" class="w-full h-auto rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-1 text-sky-600">NANOKINE</h3>
-                    <p class="text-sm text-gray-700 mb-4">
+                    <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-10-name">NANOKINE</h3>
+                    <p class="text-sm text-gray-700 mb-4" id="product-10-desc">
                         សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ
                         ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា។
                         សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ។
@@ -175,23 +196,23 @@
 
         <!-- News Section -->
         <section id="news" class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700">News</h2>
+            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="news-heading">News</h2>
             <ul class="list-disc list-inside space-y-2">
-                <li>Fsdflkjffaslfs</li>
-                <li>Fdsfsafsfsfsfs</li>
+                <li id="news-1">Fsdflkjffaslfs</li>
+                <li id="news-2">Fdsfsafsfsfsfs</li>
             </ul>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="bg-white p-8 rounded-lg shadow-lg">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700">Contact</h2>
+            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="contact-heading">Contact</h2>
             <address class="space-y-2 not-italic">
-                <p class="font-semibold text-sky-600">TIM MEDICARE CO.,LTD</p>
-                <p><strong>Website:</strong> <a href="http://www.timmedicare.com" class="text-sky-500 hover:underline">www.timmedicare.com</a></p>
-                <p><strong>Email:</strong> <a href="mailto:sokha@timmedicare.com" class="text-sky-500 hover:underline">sokha@timmedicare.com</a></p>
-                <p><strong>Tel:</strong> +855 12538373 / +855 70 999 551</p>
-                <p><strong>Address:</strong> No.C21, Street Betong, Borey Chamkadong, Sambuor Village, Sangkat Dongkao, Khan Dongkao, Phnom Penh, Kingdom of Cambodia.</p>
-                <p><strong>Post Code:</strong> 120501</p>
+                <p class="font-semibold text-sky-600" id="contact-company">TIM MEDICARE CO.,LTD</p>
+                <p><strong id="contact-website-label">Website:</strong> <a href="http://www.timmedicare.com" class="text-sky-500 hover:underline">www.timmedicare.com</a></p>
+                <p><strong id="contact-email-label">Email:</strong> <a href="mailto:sokha@timmedicare.com" class="text-sky-500 hover:underline">sokha@timmedicare.com</a></p>
+                <p><strong id="contact-tel-label">Tel:</strong> +855 12538373 / +855 70 999 551</p>
+                <p><strong id="contact-address-label">Address:</strong> No.C21, Street Betong, Borey Chamkadong, Sambuor Village, Sangkat Dongkao, Khan Dongkao, Phnom Penh, Kingdom of Cambodia.</p>
+                <p><strong id="contact-postcode-label">Post Code:</strong> 120501</p>
             </address>
         </section>
 
@@ -199,9 +220,183 @@
 
     <!-- Footer -->
     <footer class="bg-gray-200 text-center py-4 mt-8 text-sm text-gray-600 rounded-t-lg">
-        <p>&copy; 2025 TIM Medicare. All rights reserved.</p>
+        <p id="footer-text">&copy; 2025 TIM Medicare. All rights reserved.</p>
     </footer>
 
+    <script>
+        const translations = {
+            en: {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-products': 'Products',
+                'nav-news': 'News',
+                'nav-contact': 'Contact',
+                'home-title': 'Your Health, Our Priority',
+                'home-slogan': 'TIM Medicare makes a better solution and best saving!',
+                'home-text-1': 'The willingness to differentiate from innovative products is the corporate spirit of TIM Medicare that remains unchanged in the fast-changing medical industry. The goal of TIM Medicare is to create the safest medical products and best qualities that satisfy our customers based on original technology and experts in each field of the medical industry.',
+                'home-objectives-heading': 'Objectives:',
+                'objective-1': 'Establish strong supplier contracts to ensure consistent inventory.',
+                'objective-2': 'Attain full regulatory compliance of country and international standard certificates such as ISO/GMP/CE/FDA/MOH.',
+                'about-heading': 'About',
+                'about-text-1': 'TIM Medicare is an independent distributor of medicines, medical devices and consumables, and haemodialysis solution that is focusing on hospitals, retail pharmacies, and health care clinics in the Kingdom of Cambodia. Established in 2020 plus several years experience with this medical industry.',
+                'about-text-2': 'To provide high quality, affordable pharmaceutical products and devices to healthcare providers and pharmacies, ensuring timely delivery and a reliable supplier. To become a leading distributor of pharmaceutical products and devices known for quality service, integrity, and customer satisfaction.',
+                'business-area-heading': 'Business Area',
+                'business-1': 'Medicines',
+                'business-2': 'Medical Devices',
+                'business-3': 'Hemodialysis Solution',
+                'partnerships-heading': 'Partnership Brands & Manufacturers',
+                'product-1-name': 'FICOCYTE 30MU',
+                'product-1-desc-1': 'Filgrastim',
+                'product-1-desc-2': 'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស',
+                'product-2-name': 'Wound Healing Dressing',
+                'product-2-desc': 'កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)',
+                'product-3-name': 'Wound Healing Paste',
+                'product-3-desc': 'ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 ទិប (10g)',
+                'product-4-name': 'PCN Catheter Set',
+                'product-4-desc-1': 'Nephrology & Urology Accessory',
+                'product-4-desc-2': '8 FR / 10FR / 14 FR<br>Brand Advin',
+                'product-5-name': 'Stone Retrieval Basket - Nitinol',
+                'product-5-desc-1': 'Nephrology and Urology Accessory',
+                'product-5-desc-2': '4FR, 110cm, Segura, Tipless<br>Brand Advin',
+                'product-6-name': 'Double J Stent',
+                'product-6-desc-1': 'Nephrology and Urology Accessory',
+                'product-6-desc-2': 'Single Loop<br>7 FR, 24 CM<br>Both End Open, BLUE<br>Brand Advin',
+                'product-7-name': 'PCNL Catherter, Pigtail',
+                'product-7-desc-1': 'Nephrology and Urology Accessory',
+                'product-7-desc-2': '8FR/30cm<br>Brand SEPLOU',
+                'product-8-name': 'Disposable Endoscopic Hemoclip',
+                'product-8-desc-1': 'Gastrointestinal (GI) Accessory',
+                'product-8-desc-2': '2.5mm, 2300mm<br>11mm / 13mm / 16mm<br>Coated, One-One Rotation<br>Brand Vedkang',
+                'product-9-name': 'Clip Hem-o-lok',
+                'product-9-desc-1': 'Brand Meta Biomed',
+                'product-9-desc-2': 'Size: L and XL<br>6 clips / 1 Cartridge',
+                'product-10-name': 'NANOKINE',
+                'product-10-desc': 'សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា។ សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ។',
+                'products-heading': 'Products',
+                'news-heading': 'News',
+                'news-1': 'Fsdflkjffaslfs',
+                'news-2': 'Fdsfsafsfsfsfs',
+                'contact-heading': 'Contact',
+                'contact-company': 'TIM MEDICARE CO.,LTD',
+                'contact-website-label': 'Website:',
+                'contact-email-label': 'Email:',
+                'contact-tel-label': 'Tel:',
+                'contact-address-label': 'Address:',
+                'contact-postcode-label': 'Post Code:',
+                'footer-text': '© 2024 TIM Medicare. All rights reserved.'
+            },
+            kh: {
+                'nav-home': 'ទំព័រដើម',
+                'nav-about': 'អំពីយើង',
+                'nav-products': 'ផលិតផល',
+                'nav-news': 'ព័ត៌មាន',
+                'nav-contact': 'ទំនាក់ទំនង',
+                'home-title': 'សុខភាពរបស់អ្នក គឺជាអាទិភាពរបស់យើង',
+                'home-slogan': 'TIM Medicare ផ្តល់ដំណោះស្រាយល្អបំផុត និងការសន្សំដ៏ល្អបំផុត!',
+                'home-text-1': 'ឆន្ទៈក្នុងការធ្វើពិពិធកម្មពីផលិតផលច្នៃប្រឌិតថ្មី គឺជាស្មារតីរបស់ TIM Medicare ដែលមិនផ្លាស់ប្តូរនៅក្នុងឧស្សាហកម្មវេជ្ជសាស្ត្រដែលផ្លាស់ប្តូរយ៉ាងឆាប់រហ័ស។ គោលដៅរបស់ TIM Medicare គឺបង្កើតផលិតផលវេជ្ជសាស្ត្រដែលមានសុវត្ថិភាពបំផុត និងគុណភាពល្អបំផុតដែលបំពេញចិត្តអតិថិជនរបស់យើងដោយផ្អែកលើបច្ចេកវិទ្យាដើម និងអ្នកជំនាញក្នុងវិស័យនីមួយៗនៃឧស្សាហកម្មវេជ្ជសាស្ត្រ។',
+                'home-objectives-heading': 'គោលបំណង:',
+                'objective-1': 'បង្កើតកិច្ចសន្យាជាមួយអ្នកផ្គត់ផ្គង់រឹងមាំ ដើម្បីធានាបាននូវសារពើភ័ណ្ឌជាប់លាប់។',
+                'objective-2': 'សម្រេចបាននូវការអនុលោមតាមបទប្បញ្ញត្តិពេញលេញនៃប្រទេស និងវិញ្ញាបនបត្រស្តង់ដារអន្តរជាតិដូចជា ISO/GMP/CE/FDA/MOH។',
+                'about-heading': 'អំពីយើង',
+                'about-text-1': 'TIM Medicare គឺជាអ្នកចែកចាយឯករាជ្យនៃឱសថ ឧបករណ៍ និងសម្ភារៈប្រើប្រាស់ក្នុងមន្ទីរពេទ្យ និងដំណោះស្រាយសម្រាប់ការលាងឈាម (haemodialysis solution) ដែលផ្តោតលើមន្ទីរពេទ្យ ឱសថស្ថានលក់រាយ និងគ្លីនិកថែទាំសុខភាពក្នុងព្រះរាជាណាចក្រកម្ពុជា។ បង្កើតឡើងនៅឆ្នាំ ២០២០ បូកនឹងបទពិសោធន៍ជាច្រើនឆ្នាំក្នុងឧស្សាហកម្មវេជ្ជសាស្ត្រនេះ។',
+                'about-text-2': 'ដើម្បីផ្តល់នូវផលិតផលឱសថ និងឧបករណ៍ដែលមានគុណភាពខ្ពស់ និងតម្លៃសមរម្យ ដល់អ្នកផ្តល់សេវាថែទាំសុខភាព និងឱសថស្ថាន ធានាការដឹកជញ្ជូនទាន់ពេលវេលា និងអ្នកផ្គត់ផ្គង់ដែលអាចទុកចិត្តបាន។ ដើម្បីក្លាយជាអ្នកចែកចាយឈានមុខគេនៃផលិតផលឱសថ និងឧបករណ៍ដែលត្រូវបានគេស្គាល់សម្រាប់សេវាកម្មដែលមានគុណភាព ភាពស្មោះត្រង់ និងការពេញចិត្តរបស់អតិថិជន។',
+                'business-area-heading': 'ផ្នែកអាជីវកម្ម',
+                'business-1': 'ឱសថ',
+                'business-2': 'ឧបករណ៍វេជ្ជសាស្ត្រ',
+                'business-3': 'ដំណោះស្រាយលាងឈាម',
+                'partnerships-heading': 'ម៉ាក និងក្រុមហ៊ុនផលិតដែលជាដៃគូ',
+                'product-1-name': 'FICOCYTE 30MU',
+                'product-1-desc-1': 'Filgrastim',
+                'product-1-desc-2': 'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស',
+                'product-2-name': 'Wound Healing Dressing',
+                'product-2-desc': 'កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)',
+                'product-3-name': 'Wound Healing Paste',
+                'product-3-desc': 'ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។ មួយប្រអប់មាន 12 ទិប (10g)',
+                'product-4-name': 'PCN Catheter Set',
+                'product-4-desc-1': 'ឧបករណ៍ប្រើប្រាស់សម្រាប់ការវះកាត់តម្រងនោម និងប្រព័ន្ធនោម',
+                'product-4-desc-2': '8 FR / 10FR / 14 FR<br>ម៉ាក Advin',
+                'product-5-name': 'Stone Retrieval Basket - Nitinol',
+                'product-5-desc-1': 'ឧបករណ៍ប្រើប្រាស់សម្រាប់ការវះកាត់តម្រងនោម និងប្រព័ន្ធនោម',
+                'product-5-desc-2': '4FR, 110cm, Segura, Tipless<br>ម៉ាក Advin',
+                'product-6-name': 'Double J Stent',
+                'product-6-desc-1': 'ឧបករណ៍ប្រើប្រាស់សម្រាប់ការវះកាត់តម្រងនោម និងប្រព័ន្ធនោម',
+                'product-6-desc-2': 'Single Loop<br>7 FR, 24 CM<br>Both End Open, BLUE<br>ម៉ាក Advin',
+                'product-7-name': 'PCNL Catherter, Pigtail',
+                'product-7-desc-1': 'ឧបករណ៍ប្រើប្រាស់សម្រាប់ការវះកាត់តម្រងនោម និងប្រព័ន្ធនោម',
+                'product-7-desc-2': '8FR/30cm<br>ម៉ាក SEPLOU',
+                'product-8-name': 'Disposable Endoscopic Hemoclip',
+                'product-8-desc-1': 'ឧបករណ៍ប្រើប្រាស់ក្នុងក្រពះពោះវៀន (GI)',
+                'product-8-desc-2': '2.5mm, 2300mm<br>11mm / 13mm / 16mm<br>Coated, One-One Rotation<br>ម៉ាក Vedkang',
+                'product-9-name': 'Clip Hem-o-lok',
+                'product-9-desc-1': 'ម៉ាក Meta Biomed',
+                'product-9-desc-2': 'ទំហំ: L និង XL<br>6 clips / 1 ប្រអប់',
+                'product-10-name': 'NANOKINE',
+                'product-10-desc': 'សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា។ សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ។',
+                'products-heading': 'ផលិតផល',
+                'news-heading': 'ព័ត៌មាន',
+                'news-1': 'Fsdflkjffaslfs',
+                'news-2': 'Fdsfsafsfsfsfs',
+                'contact-heading': 'ទំនាក់ទំនង',
+                'contact-company': 'ក្រុមហ៊ុន ធីម មេឌីខែរ ខូអិលធីឌី',
+                'contact-website-label': 'គេហទំព័រ:',
+                'contact-email-label': 'អ៊ីម៉ែល:',
+                'contact-tel-label': 'ទូរស័ព្ទ:',
+                'contact-address-label': 'អាសយដ្ឋាន:',
+                'contact-postcode-label': 'លេខកូដប្រៃសណីយ៍:',
+                'footer-text': '© 2024 ធីម មេឌីខែរ. រក្សាសិទ្ធិគ្រប់យ៉ាង។'
+            }
+        };
+
+        const languageButtons = {
+            en: document.getElementById('lang-en'),
+            kh: document.getElementById('lang-kh')
+        };
+        const allButtons = [languageButtons.en, languageButtons.kh];
+        const navMenuButton = document.getElementById('nav-menu-button');
+        const navMenu = document.getElementById('nav-menu');
+        const overlay = document.getElementById('overlay');
+
+        function setLanguage(lang) {
+            document.querySelectorAll('[id]').forEach(element => {
+                const key = element.id;
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            allButtons.forEach(btn => {
+                btn.classList.remove('bg-sky-200', 'text-sky-800');
+                btn.classList.add('bg-gray-200', 'text-gray-800');
+            });
+            const activeBtn = languageButtons[lang];
+            activeBtn.classList.remove('bg-gray-200', 'text-gray-800');
+            activeBtn.classList.add('bg-sky-200', 'text-sky-800');
+
+            localStorage.setItem('lang', lang);
+        }
+
+        function toggleMenu() {
+            navMenu.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        function closeMenu() {
+            navMenu.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
+        }
+
+        navMenuButton.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('lang') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
 </body>
 </html>
 
