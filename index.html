@@ -63,7 +63,8 @@
     <header class="bg-white shadow-md rounded-b-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between relative">
             <a href="#" class="flex items-center space-x-2 text-2xl font-bold tracking-tight text-sky-700" data-section="home">
-                  <img src="a13.jpg" alt="TIM Medicare Logo" class="h-8">
+                <!-- Using a placeholder image for the logo -->
+                <img src="a13.jpg" alt="TIM Medicare Logo" class="h-8 rounded-full">
                 <span id="brand-name">TIM Medicare</span>
             </a>
 
@@ -131,13 +132,15 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="partnerships-heading">Partnership Brands & Manufacturers</h3>
+                    <!--
                     <ul class="list-disc list-inside space-y-1">
                         <li id="partner-1">Dsjfkosfjsd</li>
                         <li id="partner-2">Dfksfjass</li>
                         <li id="partner-3">Fdskfhjsfs</li>
                         <li id="partner-4">Sdfshfkljfsj</li>
-                    </ul>
+                    </ul> -->
                     <div class="mt-4 flex justify-center">
+                        <!-- Using a placeholder image for the partnership brands -->
                         <img src="a15.jpg" alt="Partnership Brands" class="w-full max-w-sm rounded-lg shadow-md">
                     </div>
                 </div>
@@ -146,7 +149,6 @@
 
         <section id="products" class="page-section bg-white p-8 rounded-lg shadow-lg hidden">
             <h2 class="text-3xl font-bold mb-4 text-sky-700" id="products-heading">Products</h2>
-
             <div id="product-list">
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-6 space-y-4 sm:space-y-0">
                     <h3 class="text-2xl font-semibold text-sky-600" id="all-products-heading">All Products</h3>
@@ -159,54 +161,66 @@
                             <label for="category-filter" class="text-lg font-medium text-gray-700" id="filter-label">Filter:</label>
                             <select id="category-filter" class="form-select block w-full sm:w-40 px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-sky-500 focus:border-sky-500 sm:text-sm">
                                 <option value="all" id="filter-all"></option>
-                                <option value="wound-care" id="filter-wound-care"></option>
-                                <option value="urology" id="filter-urology"></option>
-                                <option value="endoscopy" id="filter-endoscopy"></option>
-                                <option value="others" id="filter-others"></option>
+                                <option value="medicines" id="filter-medicines"></option>
+                                <option value="medical-devices" id="filter-medical-devices"></option>
+                                <option value="hemodialysis" id="filter-hemodialysis"></option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-1" data-category="wound-care">
+                    <!-- MEDICINES -->
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-1" data-category="medicines">
                         <img src="a1.jpg" alt="FICOCYTE 30MU" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-1-name">FICOCYTE 30MU</h3>
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-1-name"></h3>
                     </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-2" data-category="wound-care">
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-2" data-category="medicines">
                         <img src="a2.jpg" alt="Wound Healing Dressing" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-2-name">Wound Healing Dressing</h3>
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-2-name"></h3>
                     </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-3" data-category="wound-care">
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-3" data-category="medicines">
                         <img src="a3.jpg" alt="Wound Healing Paste" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-3-name">Wound Healing Paste</h3>
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-3-name"></h3>
                     </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-4" data-category="urology">
-                        <img src="a4.jpg" alt="PCN Catheter Set" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-4-name">PCN Catheter Set</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-5" data-category="urology">
-                        <img src="a5.jpg" alt="Stone Retrieval Basket - Nitinol" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-5-name">Stone Retrieval Basket - Nitinol</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-6" data-category="urology">
-                        <img src="a6.jpg" alt="Double J Stent" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-6-name">Double J Stent</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-7" data-category="urology">
-                        <img src="a7.jpg" alt="PCNL Catherter, Pigtail" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-7-name">PCNL Catherter, Pigtail</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-8" data-category="endoscopy">
-                        <img src="a8.jpg" alt="Disposable Endoscopic Hemoclip" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-8-name">Disposable Endoscopic Hemoclip</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-9" data-category="endoscopy">
-                        <img src="a9.jpg" alt="Clip Hem-o-lok" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-9-name">Clip Hem-o-lok</h3>
-                    </a>
-                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-10" data-category="others">
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-10" data-category="medicines">
                         <img src="a10.jpg" alt="NANOKINE" class="w-full h-auto rounded-lg mb-4">
-                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-10-name">NANOKINE</h3>
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-10-name"></h3>
+                    </a>
+                    
+                    <!-- MEDICAL DEVICES -->
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-4" data-category="medical-devices">
+                        <img src="a4.jpg" alt="PCN Catheter Set" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-4-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-5" data-category="medical-devices">
+                        <img src="a5.jpg" alt="Stone Retrieval Basket - Nitinol" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-5-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-6" data-category="medical-devices">
+                        <img src="a7.jpg" alt="PCNL Catherter, Pigtail" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-6-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-7" data-category="medical-devices">
+                        <img src="a8.jpg" alt="Disposable Endoscopic Hemoclip" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-7-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-8" data-category="medical-devices">
+                        <img src="a9.jpg" alt="Clip Hem-o-lok" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-8-name"></h3>
+                    </a>
+
+                    <!-- HEMODIALYSIS -->
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-9" data-category="hemodialysis">
+                        <img src="a18.jpg" alt="Hemodialysis Device" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-9-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-11" data-category="hemodialysis">
+                        <img src="a17.jpg" alt="Hemodialysis Catheter" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-11-name"></h3>
+                    </a>
+                    <a href="#" class="bg-sky-50 p-4 rounded-lg shadow-inner flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300" data-product-id="product-12" data-category="hemodialysis">
+                        <img src="a19.jpg" alt="Hemodialysis Machine" class="w-full h-auto rounded-lg mb-4">
+                        <h3 class="text-xl font-semibold mb-1 text-sky-600" id="product-12-name"></h3>
                     </a>
                 </div>
             </div>
@@ -215,8 +229,9 @@
                 <button id="back-to-products" class="mb-4 text-sky-600 hover:text-sky-800 font-semibold transition-colors duration-200">
                     &larr; <span id="back-button-text">Back to Products</span>
                 </button>
-                <div id="details-content">
-                    </div>
+                <div id="details-content" class="bg-sky-50 p-6 rounded-lg shadow-inner">
+                    <!-- Product details will be dynamically injected here -->
+                </div>
             </div>
         </section>
 
@@ -299,32 +314,22 @@
                 'contact-address-label': 'Address:',
                 'contact-postcode-label': 'Post Code:',
                 'footer-text': '© 2025 TIM Medicare. All rights reserved.',
-                'product-1-name': 'FICOCYTE 30MU',
-                'product-1-description': 'Filgrastim',
-                'product-2-name': 'Wound Healing Dressing',
-                'product-2-description': 'Dressing with medicine for quickly bandaging and treating cuts, burns, wounds, and surgeries, especially for diabetic patients. One box contains 12 sheets (10cm x 10cm).',
-                'product-3-name': 'Wound Healing Paste',
-                'product-3-description': 'Cream for quickly treating cuts, burns, wounds, and surgeries, especially for diabetic patients. One box contains 12 tubes (10g).',
-                'product-4-name': 'PCN Catheter Set',
-                'product-4-description': 'Nephrology & Urology Accessory. Sizes: 8 FR / 10FR / 14 FR. Brand: Advin',
-                'product-5-name': 'Stone Retrieval Basket - Nitinol',
-                'product-5-description': 'Nephrology and Urology Accessory. 4FR, 110cm, Segura, Tipless. Brand: Advin',
-                'product-6-name': 'Double J Stent',
-                'product-6-description': 'Nephrology and Urology Accessory. Single Loop. 7 FR, 24 CM. Both End Open, BLUE. Brand: Advin',
-                'product-7-name': 'PCNL Catherter, Pigtail',
-                'product-7-description': 'Nephrology and Urology Accessory. 8FR/30cm. Brand: SEPLOU',
-                'product-8-name': 'Disposable Endoscopic Hemoclip',
-                'product-8-description': 'Gastrointestinal (GI) Accessory. 2.5mm, 2300mm. 11mm / 13mm / 16mm. Coated. One-One Rotation. Brand: Vedkang',
-                'product-9-name': 'Clip Hem-o-lok',
-                'product-9-description': 'Size: L and XL. 6 clips / 1 Cartridge. Brand: Meta Biomed',
-                'product-10-name': 'NANOKINE',
-                'product-10-description': 'Hello, teachers and professors! This NANOKINE group was created to facilitate providing information and special programs to all of you. Thank you very much for your cooperation and for using our medicine.',
-                // New keys for filter options
                 'filter-all': 'All',
-                'filter-wound-care': 'FICOCYTE 30MU',
-                'filter-urology': 'PCN Catheter Set',
-                'filter-endoscopy': 'Disposable Endoscopic Hemoclip',
-                'filter-others': 'NANOKINE'
+                'filter-medicines': 'Medicines',
+                'filter-medical-devices': 'Medical Devices',
+                'filter-hemodialysis': 'Hemodialysis',
+                'product-1-name': 'FICOCYTE 30MU Filgrastim',
+                'product-2-name': 'Wound Healing Dressing',
+                'product-3-name': 'Wound Healing Paste',
+                'product-4-name': 'PCN Catheter Set',
+                'product-5-name': 'Stone Retrieval Basket - Nitinol',
+                'product-6-name': 'PCNL Catherter, Pigtail',
+                'product-7-name': 'Disposable Endoscopic Hemoclip',
+                'product-8-name': 'Clip Hem-o-lok',
+                'product-9-name': 'Hemodialyzer OCI-HD150/HD180/HD200',
+                'product-10-name': 'NANOKINE',
+                'product-11-name': 'Haemodialysis Blood Tubing Set',
+                'product-12-name': 'Dialysis Machine',
             },
             kh: {
                 'nav-home': 'ទំព័រដើម',
@@ -363,35 +368,352 @@
                 'contact-tel-label': 'ទូរស័ព្ទ:',
                 'contact-address-label': 'អាសយដ្ឋាន:',
                 'contact-postcode-label': 'លេខកូដប្រៃសណីយ៍:',
-                'footer-text': '© 2024 ធីម មេឌីខែរ. រក្សាសិទ្ធិគ្រប់យ៉ាង។',
-                'product-1-name': 'FICOCYTE 30MU',
-                'product-1-description': 'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស',
-                'product-2-name': 'Wound Healing Dressing',
-                'product-2-description': 'កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម ។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)',
-                'product-3-name': 'Wound Healing Paste',
-                'product-3-description': 'ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម ។ មួយប្រអប់មាន 12 ទិប (10g)',
-                'product-4-name': 'PCN Catheter Set',
-                'product-4-description': 'Nephrology & Urology Accessory. ទំហំ: 8 FR / 10FR / 14 FR. ម៉ាក: Advin',
-                'product-5-name': 'Stone Retrieval Basket - Nitinol',
-                'product-5-description': 'Nephrology and Urology Accessory. 4FR, 110cm, Segura, Tipless. ម៉ាក: Advin',
-                'product-6-name': 'Double J Stent',
-                'product-6-description': 'Nephrology and Urology Accessory. Single Loop. 7 FR, 24 CM. Both End Open, BLUE. ម៉ាក: Advin',
-                'product-7-name': 'PCNL Catherter, Pigtail',
-                'product-7-description': 'Nephrology and Urology Accessory. 8FR/30cm. ម៉ាក: SEPLOU',
-                'product-8-name': 'Disposable Endoscopic Hemoclip',
-                'product-8-description': 'Gastrointestinal (GI) Accessory. 2.5mm, 2300mm. 11mm / 13mm / 16mm. Coated. One-One Rotation. ម៉ាក: Vedkang',
-                'product-9-name': 'Clip Hem-o-lok',
-                'product-9-description': 'ទំហំ: L and XL. 6 clips / 1 Cartridge. ម៉ាក: Meta Biomed',
-                'product-10-name': 'NANOKINE',
-                'product-10-description': 'សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា ។ សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ ។',
-                // New keys for filter options
+                'footer-text': '© 2025 ធីម មេឌីខែរ. រក្សាសិទ្ធិគ្រប់យ៉ាង។',
                 'filter-all': 'ទាំងអស់',
-                'filter-wound-care': 'FICOCYTE 30MU',
-                'filter-urology': 'PCN Catheter Set',
-                'filter-endoscopy': 'Disposable Endoscopic Hemoclip',
-                'filter-others': 'NANOKINE'
+                'filter-medicines': 'ឱសថ',
+                'filter-medical-devices': 'ឧបករណ៍វេជ្ជសាស្ត្រ',
+                'filter-hemodialysis': 'ដំណោះស្រាយលាងឈាម',
+                'product-1-name': 'FICOCYTE 30MU Filgrastim',
+                'product-2-name': 'Wound Healing Dressing',
+                'product-3-name': 'Wound Healing Paste',
+                'product-4-name': 'PCN Catheter Set',
+                'product-5-name': 'Stone Retrieval Basket - Nitinol',
+                'product-6-name': 'PCNL Catherter, Pigtail',
+                'product-7-name': 'Disposable Endoscopic Hemoclip',
+                'product-8-name': 'Clip Hem-o-lok',
+                'product-9-name': 'Hemodialyzer OCI-HD150/HD180/HD200',
+                'product-10-name': 'NANOKINE',
+                'product-11-name': 'Haemodialysis Blood Tubing Set',
+                'product-12-name': 'Dialysis Machine',
             }
         };
+
+        const productsData = {
+            'product-1': {
+                name_en: 'FICOCYTE 30MU Filgrastim',
+                name_kh: 'FICOCYTE 30MU Filgrastim',
+                description_en: 'A medicine designed to help the body grow and increase its count of white blood cells.',
+                description_kh: 'ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">FICOCYTE 30MU Filgrastim</h3>
+                    <p class="mb-4">
+                        A medicine to grow and increase white blood cells. This is important for patients undergoing certain treatments that may affect their blood cell counts.
+                    </p>
+                    <p class="font-medium">Uses: <span class="text-gray-600">Medicine to grow and increase white blood cells.</span></p>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">FICOCYTE 30MU Filgrastim</h3>
+                    <p class="mb-4">
+                        ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស។
+                    </p>
+                    <p class="font-medium">ការប្រើប្រាស់: <span class="text-gray-600">ថ្នាំបណ្តុះ និងបង្កើនគ្រាប់ឈាមស។</span></p>
+                `
+            },
+            'product-2': {
+                name_en: 'Wound Healing Dressing',
+                name_kh: 'Wound Healing Dressing',
+                description_en: 'A dressing with medicine for quickly bandaging and treating cuts, burns, wounds, and surgeries, especially for diabetic patients. One box contains 12 sheets (10cm x 10cm).',
+                description_kh: 'កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម ។ មួយប្រអប់មាន 12 បន្ទះ (10cm x 10cm)',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Wound Healing Dressing</h3>
+                    <p class="mb-4">
+                        This dressing contains medicine to help speed up the healing process for various wounds, including cuts, burns, and surgical incisions. It is especially beneficial for diabetic patients.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Quantity:</span> 12 sheets per box</li>
+                        <li><span class="font-medium">Size:</span> 10cm x 10cm</li>
+                        <li><span class="font-medium">Specialty:</span> Fast healing for cuts, burns, wounds, and surgical sites, particularly for diabetic patients.</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Wound Healing Dressing</h3>
+                    <p class="mb-4">
+                        កំព្រេះ មានជាតិថ្នាំសម្រាប់ប៉ង់សឺម៉ង់ និងព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ចំនួន:</span> 12 បន្ទះ ក្នុងមួយប្រអប់</li>
+                        <li><span class="font-medium">ទំហំ:</span> 10cm x 10cm</li>
+                        <li><span class="font-medium">លក្ខណៈពិសេស:</span> ព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។</li>
+                    </ul>
+                `
+            },
+            'product-3': {
+                name_en: 'Wound Healing Paste',
+                name_kh: 'Wound Healing Paste',
+                description_en: 'A cream for quickly treating cuts, burns, wounds, and surgeries, especially for diabetic patients. One box contains 12 tubes (10g).',
+                description_kh: 'ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម ។ មួយប្រអប់មាន 12 ទិប (10g)',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Wound Healing Paste</h3>
+                    <p class="mb-4">
+                        This cream is formulated to accelerate the healing of cuts, burns, and other wounds. It is particularly effective for people with diabetes to ensure prompt and complete recovery.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Quantity:</span> 12 tubes per box</li>
+                        <li><span class="font-medium">Size:</span> 10g per tube</li>
+                        <li><span class="font-medium">Specialty:</span> Fast healing for cuts, burns, wounds, and surgical sites, particularly for diabetic patients.</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Wound Healing Paste</h3>
+                    <p class="mb-4">
+                        ក្រែមសម្រាប់លាបព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន និងជាសះឆាប់រហ័ស ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ចំនួន:</span> 12 ទិប ក្នុងមួយប្រអប់</li>
+                        <li><span class="font-medium">ទំហំ:</span> 10g ក្នុងមួយទិប</li>
+                        <li><span class="font-medium">លក្ខណៈពិសេស:</span> ព្យាបាលកន្លែង មុត រលាក របួស និងវះកាត់ បានយ៉ាងលឿន ជាពិសេសអ្នកជម្ងឺទឹកនោមផ្អែម។</li>
+                    </ul>
+                `
+            },
+            'product-10': {
+                name_en: 'NANOKINE',
+                name_kh: 'NANOKINE',
+                description_en: 'Welcome to the group for Nanokine products. This group was created to make it easier to provide information and special programs to all of you. Thank you for your cooperation and for helping to use our medicine.',
+                description_kh: 'សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ\n\nផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា ។\n\nសូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ ។',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">NANOKINE</h3>
+                    <p class="mb-4">
+                        Welcome to the group for Nanokine products. This group was created to make it easier to provide information and special programs to all of you. Thank you for your cooperation and for helping to use our medicine.
+                    </p>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">NANOKINE</h3>
+                    <p class="mb-4">
+                        សូមជំរាបសួរលោកគ្រូ និងអ្នកគ្រូ<br><br>ផលិតផល NANOKINE សូមបង្កើតក្រុមនេះ សម្រាប់បង្កើនភាពងាយស្រួលក្នុងការផ្តល់ព័ត៌មាន និងកម្មវិធីពិសេសផ្សេងៗ ជូនដល់លោកគ្រូ និងអ្នកគ្រូទាំងអស់គ្នា ។<br><br>សូមអរគុណច្រើន សម្រាប់ការសហការណ៍ និងជួយប្រើប្រាស់ថ្នាំរបស់យើងខ្ញុំ ។
+                    </p>
+                `
+            },
+            'product-4': {
+                name_en: 'PCN Catheter Set',
+                name_kh: 'PCN Catheter Set',
+                description_en: 'Nephrology & Urology Accessory. Sizes: 8 FR / 10FR / 14 FR. Brand: Advin',
+                description_kh: 'Nephrology & Urology Accessory. ទំហំ: 8 FR / 10FR / 14 FR. ម៉ាក: Advin',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">PCN Catheter Set</h3>
+                    <p class="mb-4">
+                        A percutaneous nephrostomy (PCN) catheter set used in nephrology and urology procedures for drainage.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Nephrology & Urology Accessory</li>
+                        <li><span class="font-medium">Sizes:</span> 8 FR / 10FR / 14 FR</li>
+                        <li><span class="font-medium">Brand:</span> Advin</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">PCN Catheter Set</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ដាក់បំពង់បង្ហូរទឹកនោម (PCN) ដែលប្រើក្នុងការវះកាត់តម្រងនោម និងប្រព័ន្ធទឹកនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ឧបករណ៍ប្រើប្រាស់សម្រាប់ប្រព័ន្ធទឹកនោម</li>
+                        <li><span class="font-medium">ទំហំ:</span> 8 FR / 10FR / 14 FR</li>
+                        <li><span class="font-medium">ម៉ាក:</span> Advin</li>
+                    </ul>
+                `
+            },
+            'product-5': {
+                name_en: 'Stone Retrieval Basket - Nitinol',
+                name_kh: 'Stone Retrieval Basket - Nitinol',
+                description_en: 'Nephrology and Urology Accessory. 4FR, 110cm, Segura, Tipless. Brand: Advin',
+                description_kh: 'Nephrology and Urology Accessory. 4FR, 110cm, Segura, Tipless. ម៉ាក: Advin',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Stone Retrieval Basket - Nitinol</h3>
+                    <p class="mb-4">
+                        A stone retrieval basket made of Nitinol, a flexible and durable material, used in urological procedures to remove kidney stones.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Nephrology & Urology Accessory</li>
+                        <li><span class="font-medium">Specifications:</span> 4FR, 110cm, Segura, Tipless</li>
+                        <li><span class="font-medium">Brand:</span> Advin</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Stone Retrieval Basket - Nitinol</h3>
+                    <p class="mb-4">
+                        កន្ត្រកចាប់គ្រួសដែលផលិតពី Nitinol ដែលជាវត្ថុធាតុដែលអាចបត់បែនបាន និងប្រើប្រាស់បានយូរ ប្រើក្នុងការវះកាត់ប្រព័ន្ធទឹកនោមដើម្បីយកគ្រួសក្នុងតម្រងនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ឧបករណ៍ប្រើប្រាស់សម្រាប់ប្រព័ន្ធទឹកនោម</li>
+                        <li><span class="font-medium">លក្ខណៈបច្ចេកទេស:</span> 4FR, 110cm, Segura, Tipless</li>
+                        <li><span class="font-medium">ម៉ាក:</span> Advin</li>
+                    </ul>
+                `
+            },
+            'product-6': {
+                name_en: 'PCNL Catherter, Pigtail',
+                name_kh: 'PCNL Catherter, Pigtail',
+                description_en: 'Nephrology and Urology Accessory. 8FR/30cm. Brand: SEPLOU',
+                description_kh: 'Nephrology and Urology Accessory. 8FR/30cm. ម៉ាក: SEPLOU',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">PCNL Catherter, Pigtail</h3>
+                    <p class="mb-4">
+                        A percutaneous nephrolithotomy (PCNL) catheter with a pigtail tip, used for kidney stone removal procedures.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Nephrology & Urology Accessory</li>
+                        <li><span class="font-medium">Specifications:</span> 8FR/30cm</li>
+                        <li><span class="font-medium">Brand:</span> SEPLOU</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">PCNL Catherter, Pigtail</h3>
+                    <p class="mb-4">
+                        បំពង់បូម (PCNL) ដែលមានចុងដូចកន្ទុយជ្រូក ប្រើសម្រាប់នីតិវិធីយកគ្រួសក្នុងតម្រងនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ឧបករណ៍ប្រើប្រាស់សម្រាប់ប្រព័ន្ធទឹកនោម</li>
+                        <li><span class="font-medium">លក្ខណៈបច្ចេកទេស:</span> 8FR/30cm</li>
+                        <li><span class="font-medium">ម៉ាក:</span> SEPLOU</li>
+                    </ul>
+                `
+            },
+            'product-7': {
+                name_en: 'Disposable Endoscopic Hemoclip',
+                name_kh: 'Disposable Endoscopic Hemoclip',
+                description_en: 'A disposable hemoclip used in endoscopic procedures to achieve hemostasis (stop bleeding) in the gastrointestinal tract.',
+                description_kh: 'ឧបករណ៍ Hemoclip ដែលប្រើតែម្តង ប្រើក្នុងការវះកាត់ Endoscopic ដើម្បីបញ្ឈប់ការហូរឈាមក្នុងប្រព័ន្ធរំលាយអាហារ។',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Disposable Endoscopic Hemoclip</h3>
+                    <p class="mb-4">
+                        A disposable hemoclip used in endoscopic procedures to achieve hemostasis (stop bleeding) in the gastrointestinal tract.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Gastrointestinal (GI) Accessory</li>
+                        <li><span class="font-medium">Specifications:</span> 2.5mm, 2300mm, 11mm / 13mm / 16mm</li>
+                        <li><span class="font-medium">Features:</span> Coated, One-One Rotation</li>
+                        <li><span class="font-medium">Brand:</span> Vedkang</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Disposable Endoscopic Hemoclip</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ Hemoclip ដែលប្រើតែម្តង ប្រើក្នុងការវះកាត់ Endoscopic ដើម្បីបញ្ឈប់ការហូរឈាមក្នុងប្រព័ន្ធរំលាយអាហារ។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ឧបករណ៍ប្រើប្រាស់សម្រាប់ប្រព័ន្ធរំលាយអាហារ (GI)</li>
+                        <li><span class="font-medium">លក្ខណៈបច្ចេកទេស:</span> 2.5mm, 2300mm, 11mm / 13mm / 16mm</li>
+                        <li><span class="font-medium">លក្ខណៈពិសេស:</span> Coated, One-One Rotation</li>
+                        <li><span class="font-medium">ម៉ាក:</span> Vedkang</li>
+                    </ul>
+                `
+            },
+            'product-8': {
+                name_en: 'Clip Hem-o-lok',
+                name_kh: 'Clip Hem-o-lok',
+                description_en: 'A ligation clip for securing vessels and tissues in surgical procedures. Sizes: L and XL. 6 clips per cartridge. Brand: Meta Biomed',
+                description_kh: 'ឧបករណ៍ដាក់បំពង់បង្ហូរទឹកនោម (PCN) ដែលប្រើក្នុងការវះកាត់តម្រងនោម និងប្រព័ន្ធទឹកនោម។ ទំហំ: L and XL. 6 clips / 1 Cartridge. ម៉ាក: Meta Biomed',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Clip Hem-o-lok</h3>
+                    <p class="mb-4">
+                        A non-absorbable polymer ligation clip used in surgical procedures to close vessels or tissues.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Medical Devices</li>
+                        <li><span class="font-medium">Sizes:</span> L and XL</li>
+                        <li><span class="font-medium">Quantity:</span> 6 clips per cartridge</li>
+                        <li><span class="font-medium">Brand:</span> Meta Biomed</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Clip Hem-o-lok</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ចងសរសៃឈាមដែលមិនអាចបំបែកបាន ប្រើក្នុងការវះកាត់ដើម្បីបិទសរសៃឈាម ឬជាលិកា។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ឧបករណ៍វេជ្ជសាស្ត្រ</li>
+                        <li><span class="font-medium">ទំហំ:</span> L and XL</li>
+                        <li><span class="font-medium">ចំនួន:</span> 6 clips ក្នុងមួយកន្ទុយ</li>
+                        <li><span class="font-medium">ម៉ាក:</span> Meta Biomed</li>
+                    </ul>
+                `
+            },
+            'product-9': {
+                name_en: 'Hemodialyzer OCI-HD150/HD180/HD200',
+                name_kh: 'Hemodialyzer OCI-HD150/HD180/HD200',
+                description_en: 'A new hemodialysis product for blood purification and fluid removal in patients with kidney failure. Product from Ocai Technology Co., Ltd. ',
+                description_kh: 'ផលិតផលលាងឈាមថ្មីសម្រាប់សម្អាតឈាម និងយកសារធាតុរាវចេញពីខ្លួនអ្នកជំងឺខ្សោយតម្រងនោម។',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Hemodialyzer OCI-HD150/HD180/HD200</h3>
+                    <p class="mb-4">
+                        This advanced device is used for hemodialysis, a process that purifies the blood and removes excess fluid and waste products from patients with kidney failure.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Hemodialysis</li>
+                        <li><span class="font-medium">Uses:</span> Blood purification, fluid and waste removal</li>
+                        <li><span class="font-medium">Targeted Conditions:</span> Kidney failure</li>
+                        <li><span class="font-medium">Brand:</span> Ocai Technology Co., Ltd.</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Hemodialyzer OCI-HD150/HD180/HD200</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ទំនើបនេះប្រើសម្រាប់លាងឈាម ដែលជាដំណើរការសម្អាតឈាម និងយកសារធាតុរាវ និងកាកសំណល់លើសចេញពីខ្លួនអ្នកជំងឺខ្សោយតម្រងនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ដំណោះស្រាយលាងឈាម</li>
+                        <li><span class="font-medium">ការប្រើប្រាស់:</span> សម្អាតឈាម យកសារធាតុរាវ និងកាកសំណល់ចេញ</li>
+                        <li><span class="font-medium">ស្ថានភាពគោលដៅ:</span> ខ្សោយតម្រងនោម</li>
+                    </ul>
+                `
+            },
+            'product-11': {
+                name_en: 'Haemodialysis Blood Tubing Set',
+                name_kh: 'ឧបករណ៍លាងឈាម',
+                description_en: 'Haemodialysis Blood Tubing Set from Ocai Technology Co., Ltd.',
+                description_kh: 'Haemodialysis Blood Tubing Set ពីក្រុមហ៊ុន Ocai Technology Co., Ltd.',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Haemodialysis Blood Tubing Set</h3>
+                    <p class="mb-4">
+                        A new hemodialysis product for blood purification and fluid removal in patients with kidney failure.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Hemodialysis</li>
+                        <li><span class="font-medium">Uses:</span> Blood purification, fluid and waste removal</li>
+                        <li><span class="font-medium">Targeted Conditions:</span> Kidney failure</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">ឧបករណ៍លាងឈាម</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ទំនើបនេះប្រើសម្រាប់លាងឈាម ដែលជាដំណើរការសម្អាតឈាម និងយកសារធាតុរាវ និងកាកសំណល់លើសចេញពីខ្លួនអ្នកជំងឺខ្សោយតម្រងនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ដំណោះស្រាយលាងឈាម</li>
+                        <li><span class="font-medium">ការប្រើប្រាស់:</span> សម្អាតឈាម យកសារធាតុរាវ និងកាកសំណល់ចេញ</li>
+                        <li><span class="font-medium">ស្ថានភាពគោលដៅ:</span> ខ្សោយតម្រងនោម</li>
+                    </ul>
+                `
+            },
+            'product-12': {
+                name_en: 'Dialysis Machine',
+                name_kh: 'ឧបករណ៍លាងឈាម',
+                description_en: 'Dialysis machine for patients suffering from kidney failure.',
+                description_kh: 'ម៉ាស៊ីនលាងឈាមសម្រាប់អ្នកជំងឺខ្សោយតម្រងនោម។',
+                details_en: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">Dialysis Machine</h3>
+                    <p class="mb-4">
+                        A new hemodialysis product for blood purification and fluid removal in patients with kidney failure.
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">Category:</span> Hemodialysis</li>
+                        <li><span class="font-medium">Uses:</span> Blood purification, fluid and waste removal</li>
+                        <li><span class="font-medium">Targeted Conditions:</span> Kidney failure</li>
+                    </ul>
+                `,
+                details_kh: `
+                    <h3 class="text-2xl font-semibold mb-2 text-sky-600">ឧបករណ៍លាងឈាម</h3>
+                    <p class="mb-4">
+                        ឧបករណ៍ទំនើបនេះប្រើសម្រាប់លាងឈាម ដែលជាដំណើរការសម្អាតឈាម និងយកសារធាតុរាវ និងកាកសំណល់លើសចេញពីខ្លួនអ្នកជំងឺខ្សោយតម្រងនោម។
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li><span class="font-medium">ប្រភេទ:</span> ដំណោះស្រាយលាងឈាម</li>
+                        <li><span class="font-medium">ការប្រើប្រាស់:</span> សម្អាតឈាម យកសារធាតុរាវ និងកាកសំណល់ចេញ</li>
+                        <li><span class="font-medium">ស្ថានភាពគោលដៅ:</span> ខ្សោយតម្រងនោម</li>
+                    </ul>
+                `
+            }
+        };
+
 
         const navMenuButton = document.getElementById('nav-menu-button');
         const navMenu = document.getElementById('nav-menu');
@@ -403,6 +725,13 @@
         const categoryFilter = document.getElementById('category-filter');
         const productSearch = document.getElementById('product-search');
         const productItems = document.querySelectorAll('[data-product-id]');
+        const productListSection = document.getElementById('product-list');
+        const productDetailsSection = document.getElementById('product-details');
+        const detailsContent = document.getElementById('details-content');
+        const backButton = document.getElementById('back-to-products');
+
+        let currentLang = localStorage.getItem('lang') || 'en';
+        let currentSection = 'home';
         let currentProductId = null;
 
         function setLanguage(lang) {
@@ -410,6 +739,15 @@
                 const key = element.id;
                 if (translations[lang] && translations[lang][key]) {
                     element.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update product names in the list view
+            productItems.forEach(item => {
+                const productId = item.dataset.productId;
+                const productNameElement = item.querySelector('[id^="product-"][id$="-name"]');
+                if (productNameElement) {
+                    productNameElement.textContent = productsData[productId]['name_' + lang];
                 }
             });
 
@@ -431,89 +769,91 @@
             if (document.getElementById('product-details').classList.contains('hidden') === false && currentProductId) {
                 showProductDetails(currentProductId);
             }
-            // Re-filter products after language change
-            filterProductsAndSearch();
         }
-
-        function toggleMenu() {
-            navMenu.classList.toggle('translate-x-full');
-            overlay.classList.toggle('hidden');
-        }
-
-        function closeMenu() {
-            navMenu.classList.add('translate-x-full');
-            overlay.classList.add('hidden');
-        }
-
-        function showSection(sectionId) {
+        
+        function navigateTo(sectionId) {
             sections.forEach(section => {
-                section.classList.add('hidden');
+                if (section.id === sectionId) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
             });
-            document.getElementById(sectionId).classList.remove('hidden');
-            window.scrollTo(0, 0); // Scroll to top of the page
+            currentSection = sectionId;
         }
 
         function showProductDetails(productId) {
-            const productsList = document.getElementById('product-list');
-            const productDetailsSection = document.getElementById('product-details');
-            const detailsContent = document.getElementById('details-content');
-            
-            // Hide product list and show details section
-            productsList.classList.add('hidden');
+            const product = productsData[productId];
+            if (!product) return;
+
+            detailsContent.innerHTML = product['details_' + currentLang];
+            productListSection.classList.add('hidden');
             productDetailsSection.classList.remove('hidden');
-
-            const currentLang = localStorage.getItem('lang') || 'en';
-
-            // Set the current product ID for language switching
-            currentProductId = productId;
-
-            // Get translated content
-            const productName = translations[currentLang][`${productId}-name`];
-            const productDescription = translations[currentLang][`${productId}-description`];
-            const productImageUrl = document.querySelector(`[data-product-id="${productId}"] img`).getAttribute('src');
-
-            // Generate HTML for the product details
-            let detailsHTML = `
-                <div class="flex flex-col md:flex-row md:space-x-8">
-                    <div class="md:w-1/3">
-                        <img src="${productImageUrl}" alt="${productName}" class="w-full h-auto rounded-lg mb-4 shadow-md">
-                    </div>
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold mb-2 text-sky-700">${productName}</h3>
-                        <p class="mb-4 leading-relaxed whitespace-pre-line">${productDescription}</p>
-                    </div>
-                </div>
-            `;
-            detailsContent.innerHTML = detailsHTML;
-            
-            // Update translations for the new content
-            setLanguage(currentLang);
         }
 
         function hideProductDetails() {
-            const productsList = document.getElementById('product-list');
-            const productDetailsSection = document.getElementById('product-details');
-            
-            productsList.classList.remove('hidden');
             productDetailsSection.classList.add('hidden');
-            currentProductId = null;
+            productListSection.classList.remove('hidden');
         }
 
-        function filterProductsAndSearch() {
-            const currentLang = localStorage.getItem('lang') || 'en';
-            const searchQuery = productSearch.value.toLowerCase();
-            const selectedCategory = categoryFilter.value;
+        // Event Listeners
+        navMenuButton.addEventListener('click', () => {
+            navMenu.classList.toggle('translate-x-full');
+            overlay.classList.toggle('hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            navMenu.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.dataset.section;
+                navigateTo(sectionId);
+                navMenu.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+                
+                if (sectionId === 'products') {
+                    hideProductDetails();
+                    filterProducts(); // Ensure initial state is correct
+                }
+            });
+        });
+
+        enButton.addEventListener('click', () => setLanguage('en'));
+        khButton.addEventListener('click', () => setLanguage('kh'));
+
+        // Product list click listener
+        productItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentProductId = item.dataset.productId;
+                showProductDetails(currentProductId);
+            });
+        });
+
+        backButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            hideProductDetails();
+            currentProductId = null;
+        });
+
+        function filterProducts() {
+            const searchText = productSearch.value.toLowerCase();
+            const filterCategory = categoryFilter.value;
 
             productItems.forEach(item => {
                 const productId = item.dataset.productId;
-                const productName = translations[currentLang][`${productId}-name`].toLowerCase();
-                const productDescription = translations[currentLang][`${productId}-description`].toLowerCase();
-                const productCategory = item.dataset.category;
+                const product = productsData[productId];
+                const category = item.dataset.category;
 
-                const matchesSearch = productName.includes(searchQuery) || productDescription.includes(searchQuery);
-                const matchesCategory = selectedCategory === 'all' || productCategory === selectedCategory;
+                const nameMatch = product['name_' + currentLang].toLowerCase().includes(searchText);
+                const descMatch = product['description_' + currentLang].toLowerCase().includes(searchText);
+                const categoryMatch = filterCategory === 'all' || category === filterCategory;
 
-                if (matchesSearch && matchesCategory) {
+                if ((nameMatch || descMatch) && categoryMatch) {
                     item.classList.remove('hidden');
                 } else {
                     item.classList.add('hidden');
@@ -521,48 +861,14 @@
             });
         }
 
-        navMenuButton.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', closeMenu);
+        productSearch.addEventListener('input', filterProducts);
+        categoryFilter.addEventListener('change', filterProducts);
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const sectionId = e.currentTarget.getAttribute('data-section');
-                showSection(sectionId);
-                // If navigating to products section from elsewhere, hide details
-                if (sectionId === 'products') {
-                    hideProductDetails();
-                    categoryFilter.value = 'all'; // Reset filter on section change
-                    productSearch.value = ''; // Reset search on section change
-                    filterProductsAndSearch();
-                }
-                closeMenu();
-            });
-        });
-        
-        document.querySelectorAll('[data-product-id]').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const productId = e.currentTarget.getAttribute('data-product-id');
-                showProductDetails(productId);
-            });
-        });
+        // Initial setup
+        setLanguage(currentLang);
+        navigateTo(currentSection);
+        filterProducts();
 
-        document.getElementById('back-to-products').addEventListener('click', (e) => {
-            e.preventDefault();
-            hideProductDetails();
-        });
-
-        // Add event listeners for the filter and search
-        categoryFilter.addEventListener('change', filterProductsAndSearch);
-        productSearch.addEventListener('keyup', filterProductsAndSearch);
-
-        // Set initial language and show the home section on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('lang') || 'en';
-            setLanguage(savedLang);
-            showSection('home');
-        });
     </script>
 </body>
 </html>
