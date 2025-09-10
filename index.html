@@ -27,7 +27,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(95, 86, 86, 0.7); /* White overlay for text readability */
+            background-color: rgba(229, 153, 213, 0.7); /* White overlay for text readability */
             z-index: 1;
         }
         #home > * { /* Ensure content is above the overlay */
@@ -49,13 +49,50 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(95, 86, 86, 0.7); /* White overlay for text readability */
+            background-color: rgba(229, 153, 213, 0.7); /* White overlay for text readability */
             z-index: 1;
         }
         #about > * { /* Ensure content is above the overlay */
             position: relative;
             z-index: 2;
         }
+#home { position: relative; }
+#home .bg-layer {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0; /* ក្រោម overlay (::before) និង content */
+}
+#home .bg-layer.show {
+  opacity: 1;
+}
+#contact {
+  position: relative;
+  background-color: #e599d5; /* ចង់ប្ដូរ color បាន */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(229, 153, 213, 0.7); /* overlay ពណ៌ស្រទាប់លើ */
+  z-index: 1;
+}
+
+#contact > * {
+  position: relative;
+  z-index: 2; /* content នៅលើ overlay */
+}
+
+
+
+
     </style>
 </head>
 <body class="bg-sky-50 text-sky-900">
@@ -111,7 +148,7 @@
                 </ul>
             </div>
         </section>
-
+             
         <section id="about" class="page-section p-8 rounded-lg shadow-lg hidden">
             <h2 class="text-3xl font-bold mb-4 text-sky-700" id="about-heading">About Us</h2>
             <p class="mb-4 leading-relaxed" id="about-text-1">
@@ -124,11 +161,27 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                     <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="business-area-heading">Business Area</h3>
-                    <ul class="list-disc list-inside space-y-1">
-                        <li id="business-1">Medicines</li>
-                        <li id="business-2">Medical Devices</li>
-                        <li id="business-3">Hemodialysis Solution</li>
-                    </ul>
+                  <ul class="list-disc list-inside space-y-1">
+  <li>
+    <a id="business-1"
+       href="#"
+       class="area-link text-sky-700 hover:underline"
+       data-category="medicines">Medicines</a>
+  </li>
+  <li>
+    <a id="business-2"
+       href="#"
+       class="area-link text-sky-700 hover:underline"
+       data-category="medical-devices">Medical Devices</a>
+  </li>
+  <li>
+    <a id="business-3"
+       href="#"
+       class="area-link text-sky-700 hover:underline"
+       data-category="hemodialysis">Hemodialysis Solution</a>
+  </li>
+</ul>
+
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold mb-2 text-sky-600" id="partnerships-heading">Partnership Brands & Manufacturers</h3>
@@ -148,7 +201,7 @@
         </section>
 
         <section id="products" class="page-section bg-white p-8 rounded-lg shadow-lg hidden">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="products-heading">Products</h2>
+            
             <div id="product-list">
                 <div class="flex flex-col sm:flex-row items-center justify-between mb-6 space-y-4 sm:space-y-0">
                     <h3 class="text-2xl font-semibold text-sky-600" id="all-products-heading">All Products</h3>
@@ -236,25 +289,43 @@
         </section>
 
         <section id="news" class="page-section bg-white p-8 rounded-lg shadow-lg hidden">
-            <h2 class="text-3xl font-bold mb-4 text-sky-700" id="news-heading">News</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
-                    <div class="relative w-full" style="padding-top: 56.25%;">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="v1.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
-                    <div class="relative w-full" style="padding-top: 56.25%;">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="v2.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
-                    <div class="relative w-full" style="padding-top: 56.25%;">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg" src="v3.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <h2 class="text-3xl font-bold mb-4 text-sky-700" id="news-heading">News</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Video 1 -->
+    <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
+      <div class="relative w-full" style="padding-top:56.25%;">
+        <video class="absolute top-0 left-0 w-full h-full rounded-lg"
+               controls playsinline preload="none" poster="a21.jpg">
+          <source src="v1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
+      <div class="relative w-full" style="padding-top:56.25%;">
+        <video class="absolute top-0 left-0 w-full h-full rounded-lg"
+               controls playsinline preload="none" poster="a22.jpg">
+          <source src="v2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="bg-sky-50 p-4 rounded-lg shadow-inner">
+      <div class="relative w-full" style="padding-top:56.25%;">
+        <video class="absolute top-0 left-0 w-full h-full rounded-lg"
+               controls playsinline preload="none" poster="a23.jpg">
+          <source src="v3.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
         <section id="contact" class="page-section bg-white p-8 rounded-lg shadow-lg hidden">
             <h2 class="text-3xl font-bold mb-4 text-sky-700" id="contact-heading">Contact</h2>
@@ -266,6 +337,28 @@
                 <p><strong id="contact-address-label">Address:</strong> No.C21, Street Betong, Borey Chamkadong, Sambuor Village, Sangkat Dongkao, Khan Dongkao, Phnom Penh, Kingdom of Cambodia.</p>
                 <p><strong id="contact-postcode-label">Post Code:</strong> 120501</p>
             </address>
+            <div class="mt-6 flex flex-col sm:flex-row gap-4">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/qr/NCGW5ONBP5IUE1" target="_blank"
+     class="flex items-center justify-center px-4 py-2 rounded-lg bg-green-500 text-white font-semibold hover:bg-green-600 transition-colors duration-200 shadow">
+    <!-- WhatsApp Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.8 11.8 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.18 1.6 6L0 24l6.2-1.62A12 12 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.2-3.48-8.52zM12 22a9.9 9.9 0 01-5.18-1.44l-.37-.22-3.68.96.98-3.59-.24-.38A10 10 0 1122 12c0 5.52-4.48 10-10 10zm5.3-7.7c-.29-.15-1.73-.85-2-.95-.27-.1-.46-.15-.65.15s-.75.95-.92 1.15-.34.22-.63.07c-.29-.15-1.24-.46-2.35-1.47-.87-.77-1.46-1.72-1.63-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.65-1.56-.9-2.14-.24-.58-.49-.5-.65-.51h-.56c-.2 0-.52.07-.79.37s-1.04 1.02-1.04 2.48 1.07 2.88 1.22 3.07c.15.2 2.1 3.22 5.1 4.51.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.73-.71 1.97-1.39.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.35z"/>
+    </svg>
+    Add me on WhatsApp
+  </a>
+
+  <!-- Telegram -->
+  <a href="https://t.me/TimMedicare" target="_blank"
+     class="flex items-center justify-center px-4 py-2 rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition-colors duration-200 shadow">
+    <!-- Telegram Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 0a12 12 0 1012 12A12 12 0 0012 0zm5.45 8.17l-1.99 9.39c-.15.68-.56.85-1.13.53l-3.12-2.3-1.5 1.44c-.17.17-.32.32-.65.32l.23-3.21 5.85-5.29c.25-.23-.05-.36-.38-.13l-7.22 4.55-3.11-.97c-.68-.21-.7-.68.14-1.01l12.14-4.68c.56-.21 1.05.13.87.96z"/>
+    </svg>
+    Join me on Telegram
+  </a>
+</div>
+
         </section>
 
     </main>
@@ -860,6 +953,38 @@
                 }
             });
         }
+        // Business Area links -> open Products + filter
+document.querySelectorAll('.area-link').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // 1. បើក Products section
+    navigateTo('products');
+
+    // 2. កំណត់ categoryFilter value
+    const cat = link.dataset.category;
+    if (typeof categoryFilter !== 'undefined') {
+      categoryFilter.value = cat;
+    }
+
+    // 3. Clear search box
+    if (typeof productSearch !== 'undefined' && productSearch) {
+      productSearch.value = '';
+    }
+
+    // 4. Apply filter
+    if (typeof filterProducts === 'function') {
+      filterProducts();
+    }
+
+    // 5. Scroll ទៅលើ Products
+    const productsEl = document.getElementById('products');
+    if (productsEl) {
+      productsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
 
         productSearch.addEventListener('input', filterProducts);
         categoryFilter.addEventListener('change', filterProducts);
@@ -868,6 +993,7 @@
         setLanguage(currentLang);
         navigateTo(currentSection);
         filterProducts();
+        
 
     </script>
 </body>
